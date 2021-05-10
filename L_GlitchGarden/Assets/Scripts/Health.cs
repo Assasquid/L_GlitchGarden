@@ -15,15 +15,15 @@ public class Health : MonoBehaviour
             PlayDeathVFX();
             Destroy(gameObject);
         }
+    }
 
-        void PlayDeathVFX()
-        {
-            if (!deathVFX) { return; }
+    private void PlayDeathVFX()
+    {
+        if (!deathVFX) { return; }
 
-            //Some parts have been commented out because the Particle System can handle destruction itself !
-            //GameObject = deathVFXObject = Instantiate(deathVFX, transform.position, Quaternion.identity);
-            Instantiate(deathVFX, transform.position, Quaternion.identity);
-            //Destroy(deathVFXObject, 1f);
-        }
+        //Some parts have been commented out because the Particle System can handle destruction itself !
+        //GameObject = deathVFXObject = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        Instantiate(deathVFX, transform.position, Quaternion.identity);
+        //Destroy(deathVFXObject, 1f);
     }
 }
